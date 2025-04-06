@@ -1,0 +1,17 @@
+{
+  "name": "quizlet-embedder-81",
+  "version": "1.0.0",
+  "description": "A project for embedding Quizlet functionality.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    // Add your dependencies here
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

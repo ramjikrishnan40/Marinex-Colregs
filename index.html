@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizlet Embedder</title>
+</head>
+<body>
+  <h1>Email Link Authentication</h1>
+  <form id="authForm">
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit">Send Sign-In Link</button>
+  </form>
+
+  <script type="module">
+    import { sendEmailLink, completeSignIn } from "./auth.js";
+
+    document.getElementById("authForm").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      await sendEmailLink(email);
+    });
+
+    window.addEventListener("load", async () => {
+      await completeSignIn();
+    });
+  </script>
+</body>
+</html>
